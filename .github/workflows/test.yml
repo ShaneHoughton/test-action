@@ -26,8 +26,8 @@ jobs:
       - name: generate Jest reports
         uses: ShaneHoughton/comment-jest-reports@main
         with:
-          coveragedir: "./src"
           testdir: "./tests"
+          coveragedir: "./src"
 
       - name: Comment on coverage
         uses: mshick/add-pr-comment@v2
