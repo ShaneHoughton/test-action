@@ -2,6 +2,6 @@ node_modules
 .env
 
 # output files
-coverage-summary.json
-rest-results.json
+# coverage-summary.json
+# test-results.json
 output.txt
