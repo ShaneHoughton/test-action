@@ -1,4 +1,4 @@
-name: Test
+name: Test Action
 
 on:
   pull_request:
@@ -11,6 +11,8 @@ on:
     paths:
       - "src/**"
       - "tests/**"
+      - ".github/**"
+
   workflow_dispatch:
 
 jobs:
