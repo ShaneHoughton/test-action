@@ -9,8 +9,8 @@ on:
     branches:
       - main
     paths:
-      - "./src/**"
-      - "./tests/**"
+      - "src/**"
+      - "tests/**"
   workflow_dispatch:
 
 jobs:
