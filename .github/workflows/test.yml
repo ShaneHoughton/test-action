@@ -32,5 +32,5 @@ jobs:
         uses: mshick/add-pr-comment@v2
         if: always()
         with:
-          message: |
+          message-path: |
             ./output.txt
