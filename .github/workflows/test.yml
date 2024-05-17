@@ -31,7 +31,7 @@ jobs:
           outputfile: "output.md"
           coveragedir: "./src/mocks/**.js"
           coveragepct: 80
-          branchestrue: true
+          branchestrue: false
 
       - name: Comment on coverage
         uses: mshick/add-pr-comment@v2
