@@ -28,9 +28,10 @@ jobs:
       - name: generate Jest reports
         uses: ShaneHoughton/generate-jest-reports@main
         with:
+          outputfile: "output.md"
           coveragedir: "./src/mocks/**.js"
           coveragepct: 80
-          outputfile: "output.md"
+          branchestrue: false
 
       - name: Comment on coverage
         uses: mshick/add-pr-comment@v2
