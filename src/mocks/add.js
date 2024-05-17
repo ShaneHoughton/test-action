@@ -1,3 +1,3 @@
 exports.add = (a, b) => {
-  return parseInt(a) + parseInt(b);
-}
+  return a + parseInt(b);
+};

@@ -1,4 +1,4 @@
-name: Test
+name: Test Action
 
 on:
   pull_request:
@@ -9,8 +9,10 @@ on:
     branches:
       - main
     paths:
-      - "./src/**"
-      - "./tests/**"
+      - "src/**"
+      - "tests/**"
+      - ".github/**"
+
   workflow_dispatch:
 
 jobs:
@@ -24,13 +26,16 @@ jobs:
       - run: npm install
 
       - name: generate Jest reports
-        uses: ShaneHoughton/comment-jest-reports@main
+        uses: ShaneHoughton/generate-jest-reports@feat/7
         with:
-          tests: "./tests"
+          outputfile: "output.md"
+          coveragedir: "./src/mocks/**.js"
+          coveragepct: 80
+          branchestrue: false
 
       - name: Comment on coverage
         uses: mshick/add-pr-comment@v2
         if: always()
         with:
-          message: |
-            ./output.txt
+          message-path: |
+            ./output.md
